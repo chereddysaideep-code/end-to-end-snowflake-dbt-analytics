@@ -1,0 +1,101 @@
+customer_id,customer_name,country,signup_date,customer_segment
+C0001,Customer 001,Australia,2024-01-28,Consumer
+C0002,Customer 002,Germany,2024-05-14,Consumer
+C0003,Customer 003,United Kingdom,2024-07-19,Consumer
+C0004,Customer 004,Germany,2024-02-02,Small Business
+C0005,Customer 005,Germany,2024-02-17,Consumer
+C0006,Customer 006,United States,2025-05-17,Consumer
+C0007,Customer 007,United Kingdom,2025-02-10,Consumer
+C0008,Customer 008,United Kingdom,2025-07-27,Consumer
+C0009,Customer 009,United Kingdom,2025-12-28,Consumer
+C0010,Customer 010,Germany,2024-04-08,Consumer
+C0011,Customer 011,Australia,2025-11-14,Consumer
+C0012,Customer 012,United Kingdom,2025-12-26,Small Business
+C0013,Customer 013,Germany,2025-06-30,Consumer
+C0014,Customer 014,United States,2025-09-04,Enterprise
+C0015,Customer 015,Australia,2025-04-06,Consumer
+C0016,Customer 016,United States,2025-10-04,Small Business
+C0017,Customer 017,Australia,2024-01-05,Small Business
+C0018,Customer 018,Germany,2024-08-05,Consumer
+C0019,Customer 019,Canada,2025-05-17,Consumer
+C0020,Customer 020,Australia,2025-02-01,Small Business
+C0021,Customer 021,United States,2025-01-27,Small Business
+C0022,Customer 022,Germany,2024-07-25,Consumer
+C0023,Customer 023,Australia,2024-01-15,Consumer
+C0024,Customer 024,Canada,2025-07-07,Small Business
+C0025,Customer 025,Canada,2025-04-05,Small Business
+C0026,Customer 026,United Kingdom,2025-11-21,Consumer
+C0027,Customer 027,United Kingdom,2025-07-28,Consumer
+C0028,Customer 028,United States,2024-08-28,Enterprise
+C0029,Customer 029,Australia,2025-07-17,Consumer
+C0030,Customer 030,Australia,2024-04-05,Consumer
+C0031,Customer 031,United Kingdom,2025-04-29,Small Business
+C0032,Customer 032,Australia,2025-02-10,Small Business
+C0033,Customer 033,Australia,2024-08-18,Small Business
+C0034,Customer 034,Canada,2025-10-16,Consumer
+C0035,Customer 035,United Kingdom,2024-06-19,Consumer
+C0036,Customer 036,Germany,2025-06-24,Small Business
+C0037,Customer 037,United Kingdom,2024-02-05,Consumer
+C0038,Customer 038,Germany,2025-06-08,Consumer
+C0039,Customer 039,Canada,2024-06-08,Enterprise
+C0040,Customer 040,United States,2025-11-29,Consumer
+C0041,Customer 041,Australia,2024-08-30,Consumer
+C0042,Customer 042,Canada,2024-03-26,Enterprise
+C0043,Customer 043,Australia,2025-07-31,Enterprise
+C0044,Customer 044,United States,2025-11-12,Consumer
+C0045,Customer 045,United States,2025-07-10,Small Business
+C0046,Customer 046,Canada,2025-07-27,Consumer
+C0047,Customer 047,United States,2025-10-07,Consumer
+C0048,Customer 048,Germany,2024-01-28,Small Business
+C0049,Customer 049,United States,2025-09-11,Small Business
+C0050,Customer 050,Australia,2025-07-09,Small Business
+C0051,Customer 051,Australia,2024-12-05,Consumer
+C0052,Customer 052,Australia,2024-11-26,Small Business
+C0053,Customer 053,Australia,2025-10-01,Small Business
+C0054,Customer 054,Germany,2025-05-20,Enterprise
+C0055,Customer 055,United Kingdom,2024-12-13,Small Business
+C0056,Customer 056,Canada,2025-04-17,Small Business
+C0057,Customer 057,Australia,2024-08-18,Consumer
+C0058,Customer 058,United States,2024-07-08,Consumer
+C0059,Customer 059,Australia,2024-08-12,Enterprise
+C0060,Customer 060,United States,2025-01-19,Enterprise
+C0061,Customer 061,United States,2025-01-11,Consumer
+C0062,Customer 062,Australia,2024-10-09,Consumer
+C0063,Customer 063,Germany,2025-09-24,Consumer
+C0064,Customer 064,United States,2025-09-19,Consumer
+C0065,Customer 065,United States,2024-09-15,Enterprise
+C0066,Customer 066,Australia,2024-12-24,Consumer
+C0067,Customer 067,United States,2025-12-10,Consumer
+C0068,Customer 068,United States,2025-03-31,Consumer
+C0069,Customer 069,Australia,2025-02-14,Consumer
+C0070,Customer 070,Australia,2025-10-10,Consumer
+C0071,Customer 071,Canada,2024-11-13,Small Business
+C0072,Customer 072,Germany,2025-11-07,Small Business
+C0073,Customer 073,Germany,2024-08-12,Consumer
+C0074,Customer 074,United States,2024-08-21,Consumer
+C0075,Customer 075,Germany,2025-11-14,Consumer
+C0076,Customer 076,United States,2025-10-25,Consumer
+C0077,Customer 077,Canada,2025-01-08,Consumer
+C0078,Customer 078,Australia,2025-11-02,Consumer
+C0079,Customer 079,Australia,2025-08-30,Enterprise
+C0080,Customer 080,Australia,2025-04-16,Consumer
+C0081,Customer 081,Germany,2024-08-20,Enterprise
+C0082,Customer 082,Canada,2025-11-22,Consumer
+C0083,Customer 083,Germany,2024-04-22,Consumer
+C0084,Customer 084,Germany,2025-05-11,Consumer
+C0085,Customer 085,Canada,2025-03-17,Small Business
+C0086,Customer 086,Canada,2025-07-17,Small Business
+C0087,Customer 087,Canada,2024-09-24,Consumer
+C0088,Customer 088,Canada,2025-05-24,Consumer
+C0089,Customer 089,Australia,2025-01-20,Consumer
+C0090,Customer 090,United Kingdom,2025-01-21,Small Business
+C0091,Customer 091,United Kingdom,2024-04-22,Consumer
+C0092,Customer 092,Canada,2025-09-04,Enterprise
+C0093,Customer 093,United Kingdom,2025-09-16,Consumer
+C0094,Customer 094,United Kingdom,2024-03-21,Consumer
+C0095,Customer 095,Canada,2025-11-29,Small Business
+C0096,Customer 096,United Kingdom,2024-04-22,Small Business
+C0097,Customer 097,Germany,2024-01-02,Enterprise
+C0098,Customer 098,United States,2025-10-03,Consumer
+C0099,Customer 099,United States,2024-08-07,Consumer
+C0100,Customer 100,Canada,2025-07-19,Consumer

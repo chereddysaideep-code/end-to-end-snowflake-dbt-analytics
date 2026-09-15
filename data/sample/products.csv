@@ -1,0 +1,26 @@
+product_id,product_name,category,price
+P001,Wireless Headphones,Electronics,129.99
+P002,Mechanical Keyboard,Electronics,99.99
+P003,USB-C Hub,Electronics,39.99
+P004,Webcam,Electronics,79.99
+P005,Bluetooth Speaker,Electronics,89.99
+P006,Desk Lamp,Office,45.0
+P007,Notebook,Office,12.5
+P008,Office Chair,Office,249.99
+P009,Monitor Stand,Office,59.99
+P010,Desk Organizer,Office,24.99
+P011,Laptop Sleeve,Accessories,34.99
+P012,Wireless Mouse,Accessories,29.99
+P013,Phone Stand,Accessories,19.99
+P014,Cable Kit,Accessories,22.99
+P015,Travel Adapter,Accessories,49.99
+P016,Coffee Maker,Home,119.99
+P017,Water Bottle,Home,25.0
+P018,Air Purifier,Home,199.99
+P019,Smart Plug,Home,18.99
+P020,Storage Box,Home,31.99
+P021,Analytics Pro,Software,199.0
+P022,Cloud Backup,Software,99.0
+P023,Project Manager,Software,149.0
+P024,Design Suite,Software,299.0
+P025,Security Plus,Software,179.0
