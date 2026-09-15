@@ -1,0 +1,143 @@
+-- ============================================================
+-- END-TO-END SNOWFLAKE & DBT ANALYTICS PLATFORM
+-- Snowflake Database Setup
+-- ============================================================
+
+-- Create database
+CREATE DATABASE IF NOT EXISTS ANALYTICS_DB;
+
+-- Use database
+USE DATABASE ANALYTICS_DB;
+
+-- Create schemas
+CREATE SCHEMA IF NOT EXISTS RAW;
+CREATE SCHEMA IF NOT EXISTS STAGING;
+CREATE SCHEMA IF NOT EXISTS ANALYTICS;
+
+-- ============================================================
+-- RAW TABLES
+-- ============================================================
+
+USE SCHEMA RAW;
+
+-- Customers
+CREATE OR REPLACE TABLE CUSTOMERS (
+    CUSTOMER_ID VARCHAR(20),
+    CUSTOMER_NAME VARCHAR(100),
+    COUNTRY VARCHAR(100),
+    SIGNUP_DATE DATE,
+    CUSTOMER_SEGMENT VARCHAR(50)
+);
+
+-- Products
+CREATE OR REPLACE TABLE PRODUCTS (
+    PRODUCT_ID VARCHAR(20),
+    PRODUCT_NAME VARCHAR(150),
+    CATEGORY VARCHAR(100),
+    PRICE NUMBER(12,2)
+);
+
+-- Orders
+CREATE OR REPLACE TABLE ORDERS (
+    ORDER_ID VARCHAR(20),
+    CUSTOMER_ID VARCHAR(20),
+    ORDER_DATE DATE,
+    STATUS VARCHAR(50)
+);
+
+-- Order Items
+CREATE OR REPLACE TABLE ORDER_ITEMS (
+    ORDER_ID VARCHAR(20),
+    PRODUCT_ID VARCHAR(20),
+    QUANTITY NUMBER(10,0),
+    UNIT_PRICE NUMBER(12,2)
+);
+
+-- ============================================================
+-- BASIC DATA QUALITY CHECKS
+-- ============================================================
+
+-- Customer count
+SELECT COUNT(*) AS CUSTOMER_COUNT
+FROM RAW.CUSTOMERS;
+
+-- Product count
+SELECT COUNT(*) AS PRODUCT_COUNT
+FROM RAW.PRODUCTS;
+
+-- Order count
+SELECT COUNT(*) AS ORDER_COUNT
+FROM RAW.ORDERS;
+
+-- Order item count
+SELECT COUNT(*) AS ORDER_ITEM_COUNT
+FROM RAW.ORDER_ITEMS;
+
+-- Check duplicate customers
+SELECT
+    CUSTOMER_ID,
+    COUNT(*) AS RECORD_COUNT
+FROM RAW.CUSTOMERS
+GROUP BY CUSTOMER_ID
+HAVING COUNT(*) > 1;
+
+-- Check duplicate products
+SELECT
+    PRODUCT_ID,
+    COUNT(*) AS RECORD_COUNT
+FROM RAW.PRODUCTS
+GROUP BY PRODUCT_ID
+HAVING COUNT(*) > 1;
+
+-- Check duplicate orders
+SELECT
+    ORDER_ID,
+    COUNT(*) AS RECORD_COUNT
+FROM RAW.ORDERS
+GROUP BY ORDER_ID
+HAVING COUNT(*) > 1;
+
+-- ============================================================
+-- NULL CHECKS
+-- ============================================================
+
+SELECT
+    COUNT_IF(CUSTOMER_ID IS NULL) AS NULL_CUSTOMER_ID,
+    COUNT_IF(COUNTRY IS NULL) AS NULL_COUNTRY,
+    COUNT_IF(SIGNUP_DATE IS NULL) AS NULL_SIGNUP_DATE
+FROM RAW.CUSTOMERS;
+
+SELECT
+    COUNT_IF(PRODUCT_ID IS NULL) AS NULL_PRODUCT_ID,
+    COUNT_IF(PRODUCT_NAME IS NULL) AS NULL_PRODUCT_NAME,
+    COUNT_IF(PRICE IS NULL) AS NULL_PRICE
+FROM RAW.PRODUCTS;
+
+SELECT
+    COUNT_IF(ORDER_ID IS NULL) AS NULL_ORDER_ID,
+    COUNT_IF(CUSTOMER_ID IS NULL) AS NULL_CUSTOMER_ID,
+    COUNT_IF(ORDER_DATE IS NULL) AS NULL_ORDER_DATE,
+    COUNT_IF(STATUS IS NULL) AS NULL_STATUS
+FROM RAW.ORDERS;
+
+-- ============================================================
+-- ANALYTICS EXAMPLE
+-- ============================================================
+
+SELECT
+    O.ORDER_ID,
+    O.CUSTOMER_ID,
+    O.ORDER_DATE,
+    O.STATUS,
+    SUM(OI.QUANTITY * OI.UNIT_PRICE) AS ORDER_REVENUE
+FROM RAW.ORDERS O
+JOIN RAW.ORDER_ITEMS OI
+    ON O.ORDER_ID = OI.ORDER_ID
+GROUP BY
+    O.ORDER_ID,
+    O.CUSTOMER_ID,
+    O.ORDER_DATE,
+    O.STATUS
+ORDER BY
+    O.ORDER_DATE,
+    O.ORDER_ID;
