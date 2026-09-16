@@ -1,5 +1,13 @@
 # End-to-End Snowflake & dbt Analytics Platform
 
+![Data Validation](https://github.com/chereddysaideep-code/end-to-end-snowflake-dbt-analytics/actions/workflows/data-validation.yml/badge.svg)
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+
+![Snowflake](https://img.shields.io/badge/Snowflake-Data%20Warehouse-blue)
+
+![dbt](https://img.shields.io/badge/dbt-Analytics%20Engineering-orange)
+
 An end-to-end analytics engineering project demonstrating data ingestion,
 validation, cloud data warehousing, transformation, data quality testing,
 dimensional modeling, and business intelligence.
